@@ -1,0 +1,198 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+/* Base
+------------------------------------------------------------*/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #4c4c4c;
+  font-size: 1.4rem;
+  font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #ffffff;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+a {
+  text-decoration: none;
+
+  color: #000000
+}
+
+/*訪問リンクの文字色...コーヒー色*/
+
+a:visited {
+  color: #7b5544;
+  /*コーヒー色*/
+}
+
+/*リンクにロールオーバーした状態の文字色...シナモン色*/
+
+a:hover {
+
+  color: #be8f68
+}
+
+/*テキスト中央寄せ*/
+
+.text-center {
+  text-align: center;
+
+}
+
+/*boxの配置*/
+
+.block-center,
+
+section .container,
+#boxes {
+  display: block;
+  /*boxの配置*/
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*boxes以下の文字色*/
+
+.abel,
+section h2,
+#boxes h3,
+#last {
+  font-family: 'Abel', sans-serif;
+}
+
+.uppercase,
+section h2,
+#boxes h3,
+#last {
+  text-transform: uppercase;
+}
+
+/*PCではこっちになる*/
+header .bigphoto {
+  background-image: url(../image/cafegirl.jpg);
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: 45% 50%;
+}
+
+/*スマホではこっちになる*/
+@media (max-width: 768px){
+  header .bigphoto{
+    height: 250px;
+  }
+}
+
+
+header p {
+  font-size: 1.6rem;
+}
+
+/*section要素の余白を上下60pxで揃え、横は100pxにする*/
+
+section {
+  padding: 60px 60px;
+}
+
+/*boxが、PCではこっちになる*/
+section .container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  /*sectionの中のインナーボックスをウインドウ幅に対して90%に*/
+}
+
+/*boxが、スマホではこっちになる*/
+@media (max-width: 768px) {
+  section .container {
+    flex-direction: column;
+  }
+}
+
+section h2 {
+  /*sectionの見出しを32pxにする*/
+  font-size: 3.2rem;
+}
+
+.abel,
+section h2 {
+  font-family: 'Abel', sans-serif;
+}
+
+.uppercase,
+section h2 {
+  text-transform: uppercase;
+}
+
+/*boxesの後ろの色（アッシュローズ）*/
+
+#boxes {
+  background-color: #e6bfab;
+}
+
+main h2 {
+  margin-bottom: 60px;
+  color: #000000;
+}
+
+main h3 {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+/*boxの配置*/
+#boxes .box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-flex: 1;
+  flex: 1;
+  margin: 20px 10px;
+  padding: 20px;
+  background-color: #ffffff;
+  /*boxの中の色（白）*/
+}
+
+#boxes .text-center {
+  padding: 20px;
+  background-color: #7b5544;
+  /*コーヒー色*/
+  white-space: nowrap;
+}
+
+#boxes .text {
+  background-color: #ffffff;
+  /*白*/
+}
+
+#last .text-center {
+  color: #000000;
+}
+
+#last .lasttext {
+  font-size: 1.8rem;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+}
+
+/*リンクボタンの配置、色*/
+#last ul a{
+  display: inline-block;
+  width: 180px;
+  height: 30px;
+  color: #ffffff;
+  margin: 10px 10px;
+  padding: 10px;
+  -webkit-border-radius: 4%;
+  -moz-border-radius: 4%;
+  border-radius: 4%;
+  text-align: center;
+  background-color: #7e5f4d;
+}
